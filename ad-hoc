@@ -1,0 +1,15 @@
+# BECOME=pwd <sudo>
+
+$ ansible all -m apt -a update_cache=true --become --ask-become-pass
+
+# Elevated privileges
+
+$ ansible all -m apt -a name=vim-nox --become --ask-become-pass
+
+# Vim version to my hosts.
+
+$ ansible all -m apt -a "name=snapd state=latest" --become --ask-become-pass
+
+# Latest version of any package.
+
+$ ansible all -m apt -a upgrade=dist --become --ask-become-pass
