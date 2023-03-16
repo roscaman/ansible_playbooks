@@ -1,0 +1,15 @@
+# Reading from the .cfg"
+
+$ ansible all -m ping <ip_server_address>
+
+# Listing the main hosts.
+
+$ ansible all --list-hosts
+
+# Pulling the server info.
+
+$ ansible all -m gather_facts
+
+# Limit against a particular one.
+
+$ ansible all -m gather_facts --limit <ip_server_address>
